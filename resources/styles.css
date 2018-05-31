@@ -1,0 +1,101 @@
+.background {
+  viewport-fill: black;
+}
+
+.fl {
+  fill: fb-white;
+}
+
+.fs {
+  fill: gray;
+}
+
+.healthText {
+  fill: fb-lavender;
+  font-size: 30;
+  font-family: Colfax-Medium;
+  text-anchor: start;
+  text-length: 20;
+}
+
+.weatherText {
+  fill: fb-lavender;
+  font-size: 32; 
+  font-family: Colfax-Black;
+}
+
+.dateText {
+  fill: fb-white;
+}
+
+.hourhand {
+  fill: fb-red;
+}
+
+.minutehand {
+  fill: #cccccc;
+  opacity: 1;
+}
+
+.secondhand {
+  fill: fb-blue;
+}
+
+.stats {
+  x: 50%-111;
+  y: 35%+66;
+  width: 222;
+  height: 48;
+}
+
+.stats text {
+  font-family: Colfax-Black;
+/*  font-family: SevilleSharp; */
+  font-size: 30;
+  text-length: 16;
+  fill: fb-lavender;
+}
+
+#iconHRM {
+  width: 24;
+  height: 24;
+  y: 50;
+  x: 32%;
+  fill: #FF214A;
+}
+
+#txtHRM {
+  y: 71;
+  x: 32%+31;
+}
+
+.stat-left {
+  x: 31;
+}
+
+.stat-right {
+  x: 100%;
+  width: 100%;
+  text-anchor: end;
+}
+
+.stat-center {
+  x: 50%;
+  width: 100%;
+  text-anchor: middle;
+}
+
+#stats-cycle {
+  x: 17%;
+  y: 0;
+  width: 68%;
+  height: 100%;
+}
+
+.cycle-item image {
+  x: 50%;
+  y: 15;
+  fill: fb-lavender;
+  width: 24;
+  height: 24;
+}

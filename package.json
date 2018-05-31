@@ -1,0 +1,25 @@
+{
+  "fitbit": {
+    "appUUID": "1faf9a7a-9edd-4998-b047-57c93dbd6a62",
+    "appType": "clockface",
+    "appDisplayName": "Obsidian",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [
+      "access_activity",
+      "access_heart_rate",
+      "access_location",
+      "access_internet",
+      "run_background",
+      "access_user_profile"
+    ],
+    "buildTargets": [
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "Obsidian"
+      }
+    }
+  }
+}
