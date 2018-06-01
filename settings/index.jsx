@@ -3,12 +3,13 @@ function mySettings(props) {
     <Page>
       <Section
         title={<Text bold align="center">Settings</Text>}>
-        
+        {/*
         <Toggle settingsKey="weatherOn" label="Display Weather" selected />
         <Toggle settingsKey="activitiyOn" label="Display Activity" On />
         <Toggle settingsKey="heartRateOn" label="Display Heart Rate" On />
+        */}
         <Toggle settingsKey="alwaysOn" label="Display Always On" On />
-        
+        {/*
         <Select
           label={`Default Health Status`}  
           settingsKey="healthStatusDefault"
@@ -21,6 +22,7 @@ function mySettings(props) {
             {name:"Elevation"},
             {name:"HeartRate"},
           ]} />
+         */}
       </Section>
     </Page>
   );

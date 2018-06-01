@@ -3,7 +3,6 @@ import { units, locale, preferences } from "user-settings";
 import { display } from "display";
 
 import * as util from "../common/utils";
-
 import * as myActivity from "components/activity";
 import * as myClock from "components/clock";
 import * as myHRM from "components/hrm";
@@ -26,19 +25,21 @@ let imgHRM = iconHRM.getElementById("icon");
 let statsCycle = document.getElementById("stats-cycle");
 let statsCycleItems = statsCycle.getElementsByClassName("cycle-item");
 
+/* -------- configuration value --------- */
+
 const GRANULARITY = "seconds";
 
 /* --------- CLOCK ---------- */
-function clockCallback(data) {
+const clockCallback = (data) => {
   dateStr.text = data.dateText;
   hourHand.groupTransform.rotate.angle = data.hoursAngle;  
   minHand.groupTransform.rotate.angle = data.minutesAngle;
   secHand.groupTransform.rotate.angle = data.secondsAngle;
-}
+};
 myClock.initialize(GRANULARITY, clockCallback);
 
 /* ------- WEATHER ---------- */
-function weatherCallback(data) {
+const weatherCallback = (data) => {
   let temperatureUnit = units.temperature; // temperature unit came from FitBit App settings via user-settings.units
   console.log("Weather in main: " + JSON.stringify(data));
   if(data.is_success === true) {
@@ -48,11 +49,11 @@ function weatherCallback(data) {
       Math.round(data.temperature) + "°C" :
       Math.round(data.temperature * 9.0 / 5.0 + 32) + "°F";
   }
-}t 
+};
 myWeather.initialize(weatherCallback);
 
 /* ------- ACTIVITY --------- */
-function activityCallback(data) {
+const activityCallback = (data) => {
   statsCycleItems.forEach((item, index) => {
     let img = item.firstChild;
     let txt = img.nextSibling;
@@ -60,11 +61,11 @@ function activityCallback(data) {
     // Reposition the activity icon to the left of the variable length text
     img.x = txt.getBBox().x - txt.parent.getBBox().x - img.width - 7;
   });
-}
+};
 myActivity.initialize(GRANULARITY, activityCallback);
 
 /* -------- HRM ------------- */
-function hrmCallback(data) {
+const hrmCallback = (data) => {
   txtHRM.text = `${data.bpm}`;
   if (data.zone === "out-of-range") {
     imgHRM.href = "images/heart_open.png";
@@ -74,11 +75,11 @@ function hrmCallback(data) {
   if (data.bpm !== "--") {
     iconHRM.animate("highlight");
   }
-}
+};
 myHRM.initialize(hrmCallback);
 
 /* -------- SETTINGS -------- */
-function settingsCallback(data) {
+const settingsCallback = (data) => {
   if (!data) {
     return;
   }
@@ -95,5 +96,5 @@ function settingsCallback(data) {
 //heartRateOn
 //alwaysOn
 //healthStatusDefault
-}
+};
 mySettings.initialize(settingsCallback);

@@ -13,6 +13,7 @@ export default class Weather {
     if(this.onsuccess) this.onsuccess(evt.data); 
   }
   
+  // send message to Companion to fetch updating weather information
   fetch() {
     if (messaging.peerSocket.readyState === messaging.peerSocket.OPEN) {
       console.log("sending message: weather");
@@ -24,6 +25,7 @@ export default class Weather {
     }
   }
   
+  // set weather information from 'data' received. 
   update(data) {    
     if(data) { 
       console.log(`temperature: ${data.temperature} and conditions: ${data.conditions}`)
@@ -35,14 +37,5 @@ export default class Weather {
   }
     
 };
-
-/*
-messaging.peerSocket.onopen = () => {
-  console.log("Ready");
-};
-messaging.peerSocket.onerror = (err) => {
-  console.log(`Connection error: ${err.code} - ${err.message}`);
-};
-*/
 
 //setInterval(fetch, 30*1000*60);

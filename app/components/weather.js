@@ -7,10 +7,8 @@ export function initialize(callback) {
   weather = new Weather();
   onweatherupdated = callback;
   onweatherupdated(weather);
-//  settings = loadSettings();
-//  onsettingschange = callback;
-//  onsettingschange(settings);
 }
+//setInterval(weather.fetch, 30*1000*60);
 
 messaging.peerSocket.addEventListener("open", function(evt) {    
   weather.fetch();

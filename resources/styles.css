@@ -42,10 +42,11 @@
 }
 
 .stats {
-  x: 50%-111;
+  x: 5%;
   y: 35%+66;
   width: 222;
   height: 48;
+  text-anchor: middle;
 }
 
 .stats text {
@@ -60,13 +61,13 @@
   width: 24;
   height: 24;
   y: 50;
-  x: 32%;
+  x: 46%;
   fill: #FF214A;
 }
 
 #txtHRM {
   y: 71;
-  x: 32%+31;
+  x: 46%+31;
 }
 
 .stat-left {
