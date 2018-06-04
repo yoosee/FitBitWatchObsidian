@@ -15,7 +15,7 @@ messaging.peerSocket.addEventListener("open", function(evt) {
 })
 
 messaging.peerSocket.addEventListener("message", function(evt) {   
-  console.log("Weather in weather onmessage: " + JSON.stringify(evt.data));
+  console.log("Weather in weather/main onmessage: " + JSON.stringify(evt.data));
   weather.update(evt.data);
   onweatherupdated(weather);
 })

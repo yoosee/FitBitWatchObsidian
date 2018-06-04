@@ -35,11 +35,14 @@ const locationError = (error) => {
 
 const fetchWeatherOpenweather = (lat, lon) => {
   const APIKEY = '40ed40883f0964911396ea2c04020029';
-  const ENDPOINT = 'http://api.openweathermap.org/data/2.5/weather?units=metric';
-  
-  console.log('Calling OpenWeather.org API');
-  fetch(ENDPOINT + '&lat=' + lat + '&lon=' + lon + '&appid=' + APIKEY)
+  const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?units=metric';
+  let url = ENDPOINT + '&lat=' + lat + '&lon=' + lon + '&appid=' + APIKEY;
+  console.log('Calling OpenWeather.org API: ' + url);  
+  fetch(url)
   .then(function(response){
+    if(response.ok) {    
+      console.log("response ok");  
+    }    
     response.json()
     .then(function(data) {
       const weather= {
