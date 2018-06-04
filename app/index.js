@@ -27,6 +27,7 @@ let statsCycleItems = statsCycle.getElementsByClassName("cycle-item");
 
 /* -------- configuration value --------- */
 
+//const GRANULARITY = "seconds";
 const GRANULARITY = "seconds";
 
 /* --------- CLOCK ---------- */
@@ -54,9 +55,10 @@ myWeather.initialize(weatherCallback);
 
 /* ------- ACTIVITY --------- */
 const activityCallback = (data) => {
-  statsCycleItems.forEach((item, index) => {
+  let n = new Date;  
+  statsCycleItems.forEach((item, index) => {    
     let img = item.firstChild;
-    let txt = img.nextSibling;
+    let txt = img.nextSibling;    
     txt.text = data[Object.keys(data)[index]].pretty;
     // Reposition the activity icon to the left of the variable length text
     img.x = txt.getBBox().x - txt.parent.getBBox().x - img.width - 7;

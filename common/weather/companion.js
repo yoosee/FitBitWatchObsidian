@@ -15,10 +15,9 @@ export default class Weather {
   }
 }
 
-setInterval(getWeather, 30*1000*60);
-
 const getWeather = () => {
-  console.log('Updating Weather from companion and calling geolocation.');
+  let n = new Date;
+  console.log('Updating Weather from companion and calling geolocation at ' + n);
   geolocation.getCurrentPosition(locationSuccess, locationError);
 };
 
