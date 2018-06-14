@@ -2,7 +2,7 @@
 
 Obsidian is free, open source Watchface for FitBit Versa. It's Analog watch face with Weather information and activities, heart rate built in. Activities could be changed and cycled by touching status line.
 
-![Screenshort](../screenshots/Obsidian-screenshot.png)
+![Screenshort](screenshots/Obsidian-screenshot.png)
 
 Weather information is from OpenWeather.org by using device location. It'd be updated in every 30 minutes.
 
