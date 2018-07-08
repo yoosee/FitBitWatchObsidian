@@ -17,7 +17,7 @@ export default class Weather {
 
 const getWeather = () => {
   let n = new Date;
-  console.log('Updating Weather from companion and calling geolocation at ' + n);
+//  console.log('Updating Weather from companion and calling geolocation at ' + n);
   geolocation.getCurrentPosition(locationSuccess, locationError);
 };
 
@@ -25,7 +25,7 @@ const locationSuccess = (position) => {
   const lat = position.coords.latitude;
   const lon = position.coords.longitude;
   fetchWeatherOpenweather(lat, lon);
-  console.log("Position: " + lat + ", " + lon);
+//  console.log("Position: " + lat + ", " + lon);
 };
 
 const locationError = (error) => {
@@ -36,7 +36,7 @@ const fetchWeatherOpenweather = (lat, lon) => {
   const APIKEY = '40ed40883f0964911396ea2c04020029';
   const ENDPOINT = 'https://api.openweathermap.org/data/2.5/weather?units=metric';
   let url = ENDPOINT + '&lat=' + lat + '&lon=' + lon + '&appid=' + APIKEY;
-  console.log('Calling OpenWeather.org API: ' + url);  
+//  console.log('Calling OpenWeather.org API: ' + url);  
   fetch(url)
   .then(function(response){
     if(response.ok) {    
@@ -60,7 +60,7 @@ const fetchWeatherOpenweather = (lat, lon) => {
 const fetchWeatherUnderground = (lat, lon) => {
   const APIKEY = '';
   
-  console.log('Calling OpenWeather.org API');
+//  console.log('Calling OpenWeather.org API');
   const url = 'http://api.wunderground.com/api/' + APIKEY + '/conditions/astronomy/q/' + lat + ',' + lon + '.json';
   fetch(url)
   .then(function(response){
@@ -70,7 +70,7 @@ const fetchWeatherUnderground = (lat, lon) => {
         temperature: data["current_observation"]["temp_c"],
         conditions: data["current_observation"]["weather"]
       }
-      console.log("Weather: " + weather.conditions);
+//      console.log("Weather: " + weather.conditions);
       returnWeatherData(weather);
     });
   })
