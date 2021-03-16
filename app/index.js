@@ -3,11 +3,11 @@ import { units, locale, preferences } from "user-settings";
 import { display } from "display";
 
 import * as util from "../common/utils";
-import * as myActivity from "components/activity";
-import * as myClock from "components/clock";
-import * as myHRM from "components/hrm";
-import * as mySettings from "components/device-settings";
-import * as myWeather from "components/weather"
+import * as myActivity from "./components/activity";
+import * as myClock from "./components/clock";
+import * as myHRM from "./components/hrm";
+import * as mySettings from "./components/device-settings";
+import * as myWeather from "./components/weather"
 
 /* -------- UI Components --------- */
 

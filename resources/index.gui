@@ -96,9 +96,10 @@
     </use>
   </svg> 
  
+  
   <!-- Day of Week and Date -->
-  <text id="dateStr" x="77%" y="53%" font-size="24" font-family="Tungsten-Medium" class="dateText"
-        text-anchor="middle" text-length="6">-</text>
+  <text id="dateStr" x="77%" y="53%" font-size="25" font-family="Tungsten-Medium" class="dateText"
+        text-anchor="middle" text-length="8">-</text>
   
   <!-- Clock hands mins, hours and seconds -->
   <g id="mins" pointer-events="visible" transform="translate(50%,50%)">
