@@ -18,8 +18,7 @@
     ],
     "buildTargets": [
       "meson",
-      "mira",
-      "gemini"
+      "mira"
     ],
     "i18n": {
       "en-US": {

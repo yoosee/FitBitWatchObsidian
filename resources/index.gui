@@ -90,7 +90,7 @@
         <text class="stat-right" />
       </use>
       <use href="#cycleview-item" class="cycle-item">
-        <image href="images/active_minutes.png" class="image" />
+        <image href="images/azm_24px.png" class="image" />
         <text class="stat-right" />
       </use>
     </use>
